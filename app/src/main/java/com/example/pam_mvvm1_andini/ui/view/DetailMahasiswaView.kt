@@ -29,5 +29,21 @@ fun DetailMahasiswaView(
         Pair("NIM", uiStateMahasiswa.nim)
     )
 
-
+    Column (
+        modifier = modifier
+            .fillMaxSize()
+            .padding(16.dp)
+    ){
+        ElevatedButton(
+            onClick = { onBackButton() }
+        ) {
+            Text("Kembali")
+        }
+        listDataMhs.forEach { items ->
+            CardSection(
+                judulParam = items.first,
+                isiParam = items.second
+            )
+        }
+    }
 }
