@@ -40,6 +40,55 @@ fun FormMahasiswaview(
 
     val dataMahasiswa : MutableList<String> = mutableListOf(nama, selectedGender, email, alamat, nim)
 
+    //Menampilkan form input, button, dan card (wadah)
+    Column (modifier.fillMaxSize().padding(16.16.dp),
+        horizontalAlignment = Alignment.CenterHorizontally){
 
+        //Form input user
+        OutlinedTextField(value = nama, //Mengambil value nama
+            onValueChange = {nama = it}, //Memperbarui value nama setiap user menginput teks
+            placeholder = { Text("Masukkan Nama")}, //Menampilkan "masukkan nama" setiap teks kosong
+            label = { Text("Nama")}, //Menyediakan label di atas
+            modifier = Modifier.fillMaxWidth().padding(5.dp) //mengatur lebar komponen
+        )
+
+        //Radio button untuk kelamin
+        Row (){
+            listJK.forEach { item ->
+                Row (verticalAlignment = Alignment.CenterVertically) { RadioButton(
+                    selected = selectedGender == item,
+                    onClick = {
+                        selectedGender = item
+                    }
+                )
+                    Text(item)
+                }
+            }
+        }
+
+        OutlinedTextField(value = email,
+            onValueChange = {email = it},
+            placeholder = { Text("Masukkan Email")},
+            label = { Text("Email")},
+            modifier = Modifier.fillMaxWidth().padding(5.dp)
+        )
+
+        OutlinedTextField(value = alamat,
+            onValueChange = {alamat = it},
+            placeholder = { Text("Masukkan Alamat")},
+            label = { Text("Alamat")},
+            modifier = Modifier.fillMaxWidth().padding(5.dp)
+        )
+
+        OutlinedTextField(value = nim,
+            onValueChange = {nim = it},
+            placeholder = { Text("Masukkan NIM")},
+            label = { Text("NIM")},
+            modifier = Modifier.fillMaxWidth().padding(5.dp)
+        )
+
+        Button(onClick = { onSubmitClicked(dataMahasiswa) })
+        { Text("Simpan") }
+    }
 }
 
