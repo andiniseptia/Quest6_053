@@ -19,3 +19,9 @@ enum class Halaman{
     Formulir,
     Detail,
 }
+
+@Composable
+fun PengelolaHalaman(
+    navController: NavHostController = rememberNavController(),
+    viewModel: MahasiswaViewModel = viewModel()
+)
