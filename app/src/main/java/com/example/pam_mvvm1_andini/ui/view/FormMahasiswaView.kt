@@ -30,4 +30,16 @@ fun FormMahasiswaview(
     modifier: Modifier = Modifier,
     listJK: List<String>,
     onSubmitClicked: (MutableList<String>) -> Unit
-)
+){
+    //Variable yang menampung input user secara langsung
+    var nama by rememberSaveable { mutableStateOf("") }
+    var selectedGender by remember { mutableStateOf("") }
+    var email by remember { mutableStateOf("") }
+    var alamat by remember { mutableStateOf("") }
+    var nim by remember { mutableStateOf("") }
+
+    val dataMahasiswa : MutableList<String> = mutableListOf(nama, selectedGender, email, alamat, nim)
+
+
+}
+
