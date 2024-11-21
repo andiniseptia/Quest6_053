@@ -20,3 +20,14 @@ fun DetailMahasiswaView(
     uiStateMahasiswa: DataMahasiswa,
     onBackButton: () -> Unit
 )
+{
+    val listDataMhs = listOf(
+        Pair("Nama", uiStateMahasiswa.nama),
+        Pair("Gender", uiStateMahasiswa.gender),
+        Pair("Email", uiStateMahasiswa.email),
+        Pair("Alamat", uiStateMahasiswa.alamat),
+        Pair("NIM", uiStateMahasiswa.nim)
+    )
+
+
+}
