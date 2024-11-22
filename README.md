@@ -5,3 +5,5 @@ Form Mahasiswa
 
 Detail Mahasiswa
 ![image](https://github.com/user-attachments/assets/58d12575-5db0-4a9f-9a8c-13b9aa069102)
+
+Mohon maaf sebelumnya mas, saya melakukan kesalahan saat menamai repository dan baru menyadari saat akan mengumpulkan tugas di pertemuan 8.
